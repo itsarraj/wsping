@@ -1,0 +1,29 @@
+[package]
+name = "wsping"
+version = "0.1.0"
+edition = "2021"
+description = "Tests a WebSocket endpoint's real handshake and measures real ping/pong round-trip latency — a websocat alternative with timing built in"
+license = "MIT"
+authors = ["Animesh Raj <animesh080808@gmail.com>"]
+repository = "https://github.com/itsarraj/wsping"
+readme = "README.md"
+keywords = ["websocket", "ping", "latency", "cli", "network"]
+categories = ["command-line-utilities"]
+
+[lib]
+name = "wsping"
+path = "src/lib.rs"
+
+[[bin]]
+name = "wsping"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+anyhow = "1"
+tokio = { version = "1", features = ["full"] }
+tokio-tungstenite = "0.24"
+futures-util = "0.3"
+
+[dev-dependencies]
+tokio = { version = "1", features = ["full", "test-util"] }
