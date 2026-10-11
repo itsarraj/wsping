@@ -6,6 +6,12 @@ round-trip latency over N pings — a `websocat`-with-timing alternative.
 built-in latency measurement mode; `wscat` (Node) is interactive only.
 This is the narrow "just tell me the RTT" tool for either.
 
+## Installation
+
+```sh
+cargo install --path .
+```
+
 ## Usage
 
 ```bash
